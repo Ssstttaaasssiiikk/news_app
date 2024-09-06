@@ -57,6 +57,7 @@ class NewsFeedView extends StatelessWidget {
                     'date': news.date,
                     'image': news.image,
                     'title': news.name,
+                    'description': news.description,
                   });
                 },
                 date: news.date,

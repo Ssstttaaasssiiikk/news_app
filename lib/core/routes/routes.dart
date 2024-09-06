@@ -31,6 +31,7 @@ final GoRouter routes = GoRouter(
           date: news['date'] as String,
           image: news['image'] as String,
           title: news['title'] as String,
+          description: news['description'] as String?,
         );
       },
     ),

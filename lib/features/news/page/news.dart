@@ -7,11 +7,14 @@ class NewsPage extends StatelessWidget {
   final String title;
   final String date;
   final String image;
-  const NewsPage(
-      {super.key,
-      required this.title,
-      required this.date,
-      required this.image});
+  final String? description;
+  const NewsPage({
+    super.key,
+    required this.title,
+    required this.date,
+    required this.image,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +50,11 @@ class NewsPage extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(title, style: textTheme.bodySmall),
+              const SizedBox(height: 20),
+              Text(
+                description ?? 'Текст отсутсвует',
+                style: textTheme.bodySmall,
+              ),
             ],
           ),
         ),
